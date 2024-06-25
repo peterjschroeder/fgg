@@ -1,0 +1,198 @@
+\documentclass[9pt,twoside]{book}
+\setlength{\parindent}{1cm}
+\setcounter{secnumdepth}{0}
+
+%Use these packages.
+\usepackage{extsizes}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{array}
+\usepackage{capt-of}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{makeidx}
+\usepackage{pdfpages}
+\usepackage[paperwidth=8.25in, paperheight=10.75in, left=.5in, right=.5in, top=.7in, bottom=.62in]{geometry}
+%\usepackage[paperwidth=8.5in, paperheight=11in, left=.865in, right=.865in, top=.97in, bottom=.74in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\makeindex
+
+%Change margin size.
+%\addtolength{\oddsidemargin}{-.725in} %1.535
+%\addtolength{\evensidemargin}{-1.475in} %2.375
+%\addtolength{\textwidth}{2.2in}
+%\addtolength{\topmargin}{-.875in}
+%\addtolength{\textheight}{1.75in}
+\linespread{0.81}
+
+%Change position of page numbers.
+\fancyhf{}
+\fancyfoot[LE,RO]{\thepage}
+\pagestyle{fancy}
+
+%Add chapter title to header.
+\fancyhead[LE,RO]{\leftmark}
+\fancyhead[LO,RE]{FOR GOLD \& GLORY\texttrademark}
+
+%Start chapter count from zero.
+\setcounter{chapter}{-1}
+
+\begin{document}
+
+\frontmatter
+
+\setcounter{page}{0}
+
+\thispagestyle{empty} \includepdf[fitpaper=true]{front.pdf}\pagebreak
+
+%\thispagestyle{empty} \includepdf[fitpaper=true]{newfront.pdf}\pagebreak
+
+\thispagestyle{empty}\mbox{}\pagebreak
+
+\thispagestyle{empty}\mbox{}\pagebreak
+
+%Add title page.
+\thispagestyle{empty} \begin{center}
+
+\vspace*{1cm}
+
+\Huge The Adventurer's Compendium: \\
+A Comprehensive Guide to Adventuring 
+
+\vspace{1cm}
+
+\Huge \underline{\textsc{For Gold And Glory}}\texttrademark{}
+%\Huge \underline{\textbf{\textsc{For Gold And Glory}}}\textbf{\texttrademark} 
+
+\vspace{1cm}
+
+\Huge and \\
+How to Survive \\
+Long Enough to Enjoy It
+
+\vspace{2cm}
+
+\begin{minipage}{0.38\textwidth}
+\begin{flushleft} \large
+For Gold \& Glory\texttrademark \\
+\textsc{Advanced Fantasy}\\
+\textsc{Role Playing Game}\\
+\textsc{2\textsuperscript{nd} Edition} (v2.0 beta: 1 April 2014)
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\begin{flushright} \large
+\textit{Created by Justen Brown} \\
+\textit{Edited by: } \\
+\textit{Core, Magic \& Spells, and Magical Items: Moses Wildermuth} \\
+\textit{Bestiary: Moses Wildermuth, Chris Knowles, and Dan Hyland} \\
+\textit{Proofread by: } \\
+\textit{Core: Warren E. Raper III} \\
+\textit{Magic \& Spells: Adam Delvay} \\
+\textit{Magical Items and  General  Cleanup: Dan Hyland} \\
+\textit{Bestiary: Moses Wildermuth and Chris Knowles}
+\end{flushright}
+\end{minipage}
+
+
+\vspace{2cm}
+
+\begin{minipage}{0.85\textwidth}
+
+\begin{center}
+
+\noindent\includegraphics[scale=0.6]{OSR.pdf}
+
+\end{center}
+
+\noindent \begin{tabular}{|p{\textwidth}|}
+
+\hline
+\normalsize This rulebook is \textbf{OSR Compatible} and can be used with any old school RPG or modern clones. It was designed with the \textbf{advanced} version of the game in mind but with minimal changes can be used with \textbf{original} or \textbf{classic} rules or their clones. \\
+\normalsize Encounters are listed in the following format: \\
+\normalsize \hspace{2em} \textbf{Orcs} (4) -- \textbf{AC} 6, \textbf{MV} 9, \textbf{HD} 1, \textbf{THACO} 19, \textbf{\#AT} 1, \textbf{Dmg} 1d6, \textbf{SZ} M, \textbf{ML} 12, \textbf{XP} 15 \\
+\normalsize \textbf{Armor Class} is given descending values. An unarmored character is AC 10 and chainmail gives AC 5. \\
+\hline
+\end{tabular}
+
+\end{minipage}
+
+\end{center} 
+
+\newpage
+
+\thispagestyle{empty}
+
+\label{insidecover}\includepdf[scale=1.007]{insidecover.pdf}
+
+%Write the table of contents.
+\include{tableofcontents}
+
+\mainmatter
+
+%Include chapters and appendices.
+\include{intro}
+
+\include{abilityscores}
+
+\include{races}
+
+\include{classes}
+
+\include{alignment}
+
+\include{combatskills}
+
+\include{noncombatskills}
+
+\include{equipment}
+
+\include{combat}
+
+\include{adventuring}
+
+\include{encounters}
+
+\include{experience}
+
+\include{treasure}
+
+\include{hirelings}
+
+\appendix
+
+\include{spells}
+
+\include{treasurelists}
+
+\include{bestiary}
+
+%Print index.
+
+\printindex
+
+\include{legal}
+
+\pagebreak \thispagestyle{empty} \includepdf[scale=1.007]{charsheetfront.pdf}
+
+\pagebreak \thispagestyle{empty} \includepdf[scale=1.007]{charsheetback.pdf}
+
+\thispagestyle{empty}\mbox{}\pagebreak
+
+\thispagestyle{empty}\mbox{}\pagebreak
+
+\setcounter{page}{0}
+
+\thispagestyle{empty} \includepdf[fitpaper=true]{back.pdf}
+
+%\thispagestyle{empty} \includepdf[fitpaper=true]{newback.pdf}
+
+\end{document}
+
+%spine 300 px wide 2738 px from left, total width 5775 px, total height 3750 px
+%465 tall, 530 with padding
